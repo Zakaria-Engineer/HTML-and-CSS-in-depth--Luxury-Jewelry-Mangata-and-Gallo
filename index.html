@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Mangata & Gallo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico"> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/HeaderLogo.png" alt="Header Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div id="carousel-content">               
+                <div id="carousel-box">                    
+                    <div class="carousel-item">
+                        <img class="images" src="images/image1.png" alt="Image 1">                        
+                    </div> 
+                    <div class="carousel-item">   
+                        <img class="images" src="images/image2.png" alt="Image 2">                        
+                    </div>
+                    <div class="carousel-item">   
+                        <img class="images" src="images/image3.png" alt="Image 3">                    
+                    </div>
+                </div>
+            </div>            
+        </section>
+        <section class="columns">
+            <div class="column">
+                <img src="images/collection1.png" alt="Celestial Radiance">
+                <div class="columnText">
+                    <h2>Celestial Radiance</h2>
+                    <p>Step into a world where the stars align with elegance and grace.</p>
+                    <p>The Celestial Radiance collection is designed for those who appreciate the beauty of the cosmos. Each piece is adorned with shimmering gemstones that reflect the light of distant galaxies, creating a mesmerizing display that captivates the heart.</p>
+                </div>
+                <div class="buttonCol">
+                    <a href="#" class="myButton">Buy Now</a>            
+                </div>
+            </div>
+            <div class="column">
+                <img src="images/collection2.png" alt="Timeless Elegance">
+                <div class="columnText">
+                    <h2>Timeless Elegance</h2>
+                    <p>Introducing the Timeless Elegance collection, where classic beauty meets modern sophistication.</p>
+                    <p>Crafted for the discerning individual, each piece in this collection is a testament to the art of jewelry-making.</p>
+                </div>               
+                <div class="buttonCol">
+                    <a href="#" class="myButton">Buy Now</a>            
+                </div>
+            </div>
+            <div class="column">
+                <img src="images/collection3.png" alt="Whispers of the Heart">
+                <div class="columnText">
+                    <h2>Whispers of the Heart</h2>
+                    <p>Discover the Whispers of the Heart collection, a celebration of love and connection.</p>
+                    <p>Each piece is thoughtfully designed to symbolize the bonds we cherish, featuring delicate motifs and enchanting details.</p>
+                </div>
+                <div class="buttonCol">
+                    <a href="#" class="myButton">Buy Now</a>            
+                </div>
+            </div>
+            <div class="column">
+                <img src="images/collection4.png" alt="Radiant Dreams">
+                <div class="columnText">
+                    <h2>Radiant Dreams</h2>
+                    <p>Crafted for those who dare to dream, our Radiant Dreams collection embodies the essence of whimsy and wonder.</p>
+                    <p>Each gem is a vibrant burst of color, reflecting the joy and magic of life’s most cherished moments. Adorn yourself with pieces that tell your story and celebrate your journey in a way that is uniquely yours.</p>
+					<p>Seize the chance to embrace this enchanting collection and let your spirit shine!</p>
+                </div>
+                <div class="buttonCol">
+                    <a href="#" class="myButton">Buy Now</a>            
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <img src="images/FooterLogo.png" alt="Small Logo">
+        </div>
+        <div class="footer-right">
+            <p>Zakaria © Copyright 2025 Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+
+        function showNextItem() {
+            items[currentIndex].style.display = 'none'; 
+            currentIndex = (currentIndex + 1) % totalItems; 
+            items[currentIndex].style.display = 'block'; 
+        }
+
+        // Initialize carousel
+        items.forEach((item, index) => {
+            item.style.display = index === 0 ? 'block' : 'none'; 
+        });
+
+        setInterval(showNextItem, 3000); // every 3 seconds
+    </script>
+</body>
+</html>
